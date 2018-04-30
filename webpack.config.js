@@ -1,13 +1,16 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const webpack = require('webpack');
 
 module.exports = {
-    entry: [
-        './src/index.js'
-    ],
+    entry: {
+        index: './src/index.js',
+        test: './src/index.js',
+    },
+    devtool: "eval",
     output: {
         path: __dirname + '/dist',
         publicPath: '/',
-        filename: 'bundle.js'
+        filename: '[name].js'
     },
     devServer: {
         contentBase: ['./dist', './src'],
@@ -39,7 +42,19 @@ module.exports = {
     plugins: [
         new HtmlWebpackPlugin({
             title: 'Webpack Example',
-            template: './src/index.html'
+            template: './src/index.html',
+            filename: 'index.html',
+            chunks: ['index']
         }),
+        new HtmlWebpackPlugin({
+            title: 'Webpack Example',
+            template: './src/index.html',
+            filename: 'test.html',
+            chunks: ['test']
+        }),
+        new webpack.ProvidePlugin({
+            $: 'jquery',
+            jQuery: 'jquery'
+        })
     ]
 };

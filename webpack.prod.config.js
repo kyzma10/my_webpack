@@ -47,7 +47,7 @@ module.exports = {
     plugins: [
         // new webpack.optimize.AggressiveSplittingPlugin(),
         new CopyWebpackPlugin([
-            {from: './src/assets', to: './assets'}
+            {from: __dirname + '/src/assets', to: './assets'}
         ]),
         extractSass,
 

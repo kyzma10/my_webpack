@@ -4,3 +4,16 @@ docker run -p 80:80 webpack-test
 
 
 docker-compose up
+docker-compose build
+
+
+
+nick@MacBook-Pro-Nick ~/f/webpack> docker ps
+CONTAINER ID        IMAGE                             COMMAND                  CREATED              STATUS              PORTS                      NAMES
+e84b78a07c39        webpack-test                      "/bin/sh -c nginx"       About a minute ago   Up About a minute   0.0.0.0:80->80/tcp         modest_minsky
+97fd52d312bf        redis:alpine                      "docker-entrypoint.s…"   4 days ago           Up 2 hours          0.0.0.0:6379->6379/tcp     advert_redis_1
+dd7886e22c77        postgres:9.6                      "docker-entrypoint.s…"   4 days ago           Up 2 hours          0.0.0.0:5430->5432/tcp     advert_postgres_1
+1cb19cf06614        luamas/jetbrains-license-server   "/license-server"        2 months ago         Up 2 hours          0.0.0.0:22508->22508/tcp   license-server
+261c4c7b254a        tds3_django                       "/entrypoint.sh /sta…"   4 months ago         Up 2 hours          0.0.0.0:8000->8000/tcp     tds3_web_1
+⏎                                                                                                                                                                                                                                                                      nick@MacBook-Pro-Nick ~/f/webpack> docker kill e84b78a07c39
+e84b78a07c39
