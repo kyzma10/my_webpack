@@ -10,7 +10,9 @@ module.exports = {
         filename: 'bundle.js'
     },
     devServer: {
-        contentBase: ['./dist', './src']
+        contentBase: ['./dist', './src'],
+        port: 3000,
+        host: '0.0.0.0'
     },
     module: {
         rules: [
