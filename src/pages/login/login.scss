@@ -1,0 +1,127 @@
+$color-sidebar: #00b3be;
+$color-button: #f2f2f2;
+$color-border: #91d763;
+$color-text-button: #4a4a4a;
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+}
+
+ul, li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  font-size: 62.5%;
+  height: 100%;
+
+}
+
+button {
+  font-size: 1.4rem;
+  background-color: $color-button;
+  color: $color-text-button;
+  text-align: center;
+  padding: .5rem 0;
+  border: none;
+  outline: none;
+}
+
+.login {
+  width: 100%;
+  min-height: 650px;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  color: $color-button;
+
+  &__left {
+    @media (max-width: 600px) {
+      display: none;
+    }
+    background: url("../../assets/login-page/login_section.png") no-repeat;
+  }
+
+  &__sidebar {
+    background-color: $color-sidebar;
+    position: relative;
+    width: 38rem;
+
+    &__form {
+      display: block;
+      width: 34rem;
+      margin: 0 auto;
+    }
+
+    label {
+      font-size: 1.4rem;
+      color: $color-button;
+      margin-left: 1rem;
+    }
+
+    input {
+      background: none;
+      border: none;
+      outline: none;
+      margin-top: 1.5rem;
+    }
+
+    &__logo {
+      text-align: center;
+      margin-top: 1.5rem;
+      margin-bottom: 10rem;
+    }
+
+    &__sign {
+      margin-bottom: 6rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      position: relative;
+
+      button {
+        width: 15rem;
+        display: inline-block;
+      }
+
+      &__in {
+        border-bottom: 4px solid $color-border;
+      }
+
+      &__up {
+        position: absolute;
+        top: 0;
+        right: 0;
+      }
+    }
+
+    &__login {
+      width: 34rem;
+      margin-top: 1.5rem;
+    }
+
+    &__input {
+      border-bottom: 4px solid $color-button;
+    }
+  }
+
+  &__footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    color: $color-button;
+    text-align: center;
+    padding-bottom: 2rem;
+
+    &__text {
+      font-size: 1.4rem;
+    }
+  }
+}

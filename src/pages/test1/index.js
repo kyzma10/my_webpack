@@ -1,6 +1,7 @@
 import template from "raw-loader!./template.html";
 import { renderFragment } from "../../utils/render";
 import $ from "jquery";
+import './test1.scss';
 
 export function render(container) {
   renderFragment(container, template);

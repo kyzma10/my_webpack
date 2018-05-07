@@ -1,5 +1,5 @@
 {
-  "name": "webpack-lab",
+  "name": "webpack",
   "version": "1.0.0",
   "description": "",
   "main": "webpack.config.js",
@@ -25,6 +25,7 @@
     "copy-webpack-plugin": "^4.5.1",
     "css-loader": "^0.28.11",
     "extract-text-webpack-plugin": "next",
+    "file-loader": "^1.1.11",
     "html-webpack-plugin": "^3.2.0",
     "node-sass": "^4.8.3",
     "raw-loader": "^0.5.1",
